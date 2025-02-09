@@ -1,35 +1,29 @@
-# 📃 Role overview
+# 📃Роль 08-ansible-04-role-lighthouse
 
-## 08-ansible-04-role-lighthouse
-
-Description: Role install lighthouse
-
+Описание: Роль устанавливает Lighthouse
 
 | Field                | Value           |
 |--------------------- |-----------------|
 | Readme update        | 09/02/2025 |
 
-### Defaults
+### Defaults: Статические переменные с низким приоритетом
 
-**These are static variables with lower priority**
-
-#### File: defaults/main.yml
+#### Файл: defaults/main.yml
 
 | Var          | Type         | Value       |Required    | Title       |
 |--------------|--------------|-------------|-------------|-------------|
 | [lighthouse_web_user](defaults/main.yml#L2)   | str   | `www-data` |    n/a  |  n/a |
 | [lighthouse_web_port](defaults/main.yml#L3)   | str   | `8888` |    n/a  |  n/a |
 
-### Vars
+### Vars: Статические переменные с высоким приоритетом
 
-**These are variables with higher priority**
-#### File: vars/main.yml
+#### Файл: vars/main.yml
 
 | Var          | Type         | Value       |Required    | Title       |
 |--------------|--------------|-------------|-------------|-------------|
 | [lighthouse_repository](vars/main.yml#L2)   | str   | `https://github.com/VKCOM/lighthouse.git` |    n/a  |  n/a |
 
-### Tasks
+### Tasks: Задания
 
 #### File: tasks/main.yml
 
@@ -42,7 +36,7 @@ Description: Role install lighthouse
 | Get lighthouse config (lighthouse.conf) | template | False |
 | Flush handlers |  | False |
 
-## Playbook
+## Сценарий
 
 ```yml
 ---
@@ -53,17 +47,18 @@ Description: Role install lighthouse
 
 ```
 
-## Author Information
+## Автор
+
 tvm2360
 
-#### License
+#### Лицензия
 
 MIT
 
-#### Minimum Ansible Version
+#### Минимальная верия ansible
 
 2.1
 
-#### Platforms
+#### Платформы
 
 - **Ubuntu**: [20.04]
