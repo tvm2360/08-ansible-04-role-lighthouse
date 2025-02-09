@@ -1,4 +1,4 @@
-# 📃Роль 08-ansible-04-role-lighthouse
+# Роль Lighthouse (08-ansible-04-role-lighthouse)
 
 Описание: Роль устанавливает Lighthouse
 
